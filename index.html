@@ -9,10 +9,28 @@
     <script src="/script.js" defer></script>
   </head>
   <body>
-    <h1>Hi there!</h1>
-    <p>
-      I'm your cool new webpage. Made with 
-      <a href="https://www.glitch.com">Glitch</a>
-    </p>
+    <h2>To-do List</h2>
+    <div>
+      <button type="button" onclick="handlers.toggleAll()">Toggle All</button>
+    </div>
+    <div>
+      <button type="button" onclick="handlers.addTodo()">Add</button>
+      <input type="text" id="addTodoTextInput">
+    </div>
+    <div>
+      <button type="button" onclick="handlers.editTodo()">Edit</button>
+      <input type="number" id="editTodoPositionInput">
+      <input type="text" id="editTodoTextInput">
+    </div>
+    <div>
+      <button type="button" onclick="handlers.deleteTodo()">Delete</button>
+      <input type="number" id="deleteTodoPositionInput">
+    </div>
+    <div>
+      <button type="button" onclick="handlers.toggleCompleted()">Toggle Completed</button>
+      <input type="number" id="toggleCompletedPositionInput">
+    </div>
+
+    <ul></ul>
   </body>
 </html>

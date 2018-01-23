@@ -1,3 +1,14 @@
 h1 {
   color: fuchsia;
 }
+button {
+  background-color: #212121;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  cursor: pointer;
+  padding: 4px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}

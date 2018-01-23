@@ -1,18 +1,9 @@
-# My cool website
+### Welcome to Practical JavaScript!
+### =========================
 
-This file describes your project to the community. What's your cool website about? What makes it special?
+This is the finished code for the application from Practical JavaScript.
 
-ヽ(๏∀๏ )ﾉ
+I completed this application over two days with the great instructions provided
+by Gordon Zhu.
 
-## ← index.html
-
-Where you'll write the content of your website. 
-
-## ← styles.css
-
-CSS files add styling rules to your content
-
-## ← script.js
-
-If you're feeling fancy you can add interactivity to your site with Javascript
-
+#### For more information visit: practicaljavascript.net
