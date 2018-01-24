@@ -35,8 +35,7 @@ var theList = {
       } else {
         todo.completed = true;
       }
-    })
-    
+    });
   }
 };
 
