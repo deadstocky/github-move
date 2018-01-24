@@ -20,18 +20,14 @@ var theList = {
   toggleAll: function() {
     var totalTodos = this.todos.length;
     var completedTodos = 0;
-    // First, get number of completed to-do's
     this.todos.forEach(function(todo) {
       if (todo.completed === true) {
       completedTodos++
       }
     });
-    // Now, iterate through items and toggle through if statements
     this.todos.forEach(function(todo) {
-      // Case 1: If everything's true, make everything false
       if (completedTodos === totalTodos) {
         todo.completed = false;
-        // Case 2: Otherwise, make everything true
       } else {
         todo.completed = true;
       }
