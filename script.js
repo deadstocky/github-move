@@ -78,7 +78,6 @@ var view = {
     var todosUl = document.querySelector('ul');
     todosUl.innerHTML = '';
     
-    
     theList.todos.forEach(function(todo, position) {
       var todoLi = document.createElement('li');
       var textWithCompletion = '';
@@ -92,7 +91,9 @@ var view = {
       todoLi.appendChild(this.createDeleteButton());
       todosUl.appendChild(todoLi);
       }
-    })
+      // arr.forEach(callback[, thisArg])
+      // Need to add this after the callback in order to refer to the view object and not the callback itself
+    }, this);
     
   },
   createDeleteButton: function() {
