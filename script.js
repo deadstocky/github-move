@@ -20,19 +20,23 @@ var theList = {
   toggleAll: function() {
     var totalTodos = this.todos.length;
     var completedTodos = 0;
-    for (var i = 0; i < totalTodos; i++) {
-      if (this.todos[i].completed === true) {
-        completedTodos++
+    // Get number of completed to-do's
+    this.todos.forEach(function(todo) {
+      if (todo.completed === true) {
+      completedTodos++
       }
-    }
+    });
+    
+    // Case 1: If everything's true, make everything false
     if (completedTodos === totalTodos) {
-      for (var i = 0; i < totalTodos; i++) {
-        this.todos[i].completed = false;
-      }
+      this.todos.forEach(function(todo) {
+        todo.completed = false;
+      });
+      // Case 2: Otherwise, make everything true
     } else {
-      for (var i = 0; i < totalTodos; i++) {
-        this.todos[i].completed = true;
-      }
+      this.todos.forEach(function(todo) {
+        todo.completed = true;
+      });
     }
   }
 };
