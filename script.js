@@ -98,3 +98,16 @@ var view = {
     return deleteButton;
   }
 };
+
+var todosUl = document.querySelector('ul');
+todosUl.addEventListener('click', function(event) {
+  console.log(event.target.parentNode.id);
+  
+  // Get the element that was clicked on
+  var elementClicked = event.target;
+  
+  // Check if element clicked is a delete button
+  if (elementClicked.className === 'deleteButton') {
+    // Run handlers.del
+  }
+});
