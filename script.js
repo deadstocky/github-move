@@ -20,24 +20,23 @@ var theList = {
   toggleAll: function() {
     var totalTodos = this.todos.length;
     var completedTodos = 0;
-    // Get number of completed to-do's
+    // First, get number of completed to-do's
     this.todos.forEach(function(todo) {
       if (todo.completed === true) {
       completedTodos++
       }
     });
-    
-    // Case 1: If everything's true, make everything false
-    if (completedTodos === totalTodos) {
-      this.todos.forEach(function(todo) {
+    // Now, iterate through items and toggle through if statements
+    this.todos.forEach(function(todo) {
+      // Case 1: If everything's true, make everything false
+      if (completedTodos === totalTodos) {
         todo.completed = false;
-      });
-      // Case 2: Otherwise, make everything true
-    } else {
-      this.todos.forEach(function(todo) {
+        // Case 2: Otherwise, make everything true
+      } else {
         todo.completed = true;
-      });
-    }
+      }
+    })
+    
   }
 };
 
@@ -78,20 +77,23 @@ var view = {
   displayTodos: function() {
     var todosUl = document.querySelector('ul');
     todosUl.innerHTML = '';
-    for (var i = 0; i < theList.todos.length; i++) {
+    
+    
+    theList.todos.forEach(function(todo, position) {
       var todoLi = document.createElement('li');
       var textWithCompletion = '';
-      var todo = theList.todos[i];
+      
       if (todo.completed === true) {
         textWithCompletion = '(X) ' + todo.text;
       } else {
         textWithCompletion = '( ) ' + todo.text;
-      }
-      todoLi.id = i;
+      todoLi.id = position;
       todoLi.textContent = textWithCompletion;
       todoLi.appendChild(this.createDeleteButton());
       todosUl.appendChild(todoLi);
-    }
+      }
+    })
+    
   },
   createDeleteButton: function() {
     var deleteButton = document.createElement('button');
