@@ -82,11 +82,13 @@ var view = {
         textWithCompletion = '(X) ' + todo.text;
       } else {
         textWithCompletion = '( ) ' + todo.text;
+      }
+      
       todoLi.id = position;
       todoLi.textContent = textWithCompletion;
       todoLi.appendChild(this.createDeleteButton());
       todosUl.appendChild(todoLi);
-      }
+      
       // arr.forEach(callback[, thisArg])
       // Need to add this after the callback in order to refer to the view object and not the callback itself
     }, this);
