@@ -25,6 +25,7 @@ var theList = {
       completedTodos++
       }
     });
+    
     this.todos.forEach(function(todo) {
       if (completedTodos === totalTodos) {
         todo.completed = false;
