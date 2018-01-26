@@ -2,10 +2,15 @@
 var theList = {
   todos: [],
   addTodo: function(text) {
-    this.todos.push({
-      text: text,
-      completed: false
-    });
+    window.onkeypress = function(event) {
+       if (event.keyCode == 41) {
+                  this.todos.push({
+          text: text,
+          completed: false
+      });
+       }
+    }
+
   },
   editTodo: function(position, newText) {
     this.todos[position].text = newText;
@@ -68,7 +73,7 @@ var handlers = {
   }
 };
 
-// ---------- HANDLES DISPLAYING ALL UI ----------
+// ---------- FOR DISPLAYING ALL UI ----------
 var view = {
   displayTodos: function() {
     var todosUl = document.querySelector('ul');
