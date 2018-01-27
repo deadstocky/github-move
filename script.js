@@ -2,15 +2,10 @@
 var theList = {
   todos: [],
   addTodo: function(text) {
-    window.onkeypress = function(event) {
-       if (event.keyCode == 41) {
-                  this.todos.push({
-          text: text,
-          completed: false
-      });
-       }
-    }
-
+    this.todos.push({
+      text: text,
+      completed: false
+    });
   },
   editTodo: function(position, newText) {
     this.todos[position].text = newText;

@@ -1,8 +1,10 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
 h3 {
   color: fuchsia;
   text-transform: uppercase;
 }
-
 button {
   background-color: #212121;
   border: none;
