@@ -79,9 +79,9 @@ var view = {
       var textWithCompletion = '';
       
       if (todo.completed === true) {
-        textWithCompletion = '(X) ' + todo.text;
+        textWithCompletion = '◼︎ ' + todo.text;
       } else {
-        textWithCompletion = '( ) ' + todo.text;
+        textWithCompletion = '◻︎ ' + todo.text;
       }
       
       todoLi.id = position;
